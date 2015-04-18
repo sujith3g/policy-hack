@@ -1,0 +1,22 @@
+<template name="signIn">
+    <div class="entry" flex layout vertical center center-justified>
+        <div class="entry-body leaf animated pulse">
+            <tk-form data-action="sign-in" vertical layout>
+                <!-- <core-image src="/img/client/clex.png"  horizontal layout center-justified></core-image> -->
+                <div horizontal layout center-justified class="color-white"><h2>Sign In</h2></div>
+                <paper-input-decorator label="Email Address" error="We need a valid email!" floatingLabel class="input-light bold">
+                    <input is="core-input" id="email" type="email" required>
+                </paper-input-decorator>
+
+                <paper-input-decorator label="Password" error="Whats your password?" floatingLabel class="input-light bold">
+                    <input is="core-input" id="password" type="password" required>
+                </paper-input-decorator>
+
+                <div horizontal layout reverse>
+                    <submit-button class="btn btn-cyan" type="submit" raised>Sign In</submit-button>
+                </div>
+
+            </tk-form>
+        </div>
+    </div>
+</template>

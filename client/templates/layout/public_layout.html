@@ -1,0 +1,14 @@
+<template name="publicLayout">
+  {{#globalLayout}}
+    <div mode="scroll" flex vertical layout justified class="public-container">
+      {{> publicHeader}}
+
+     
+      	{{> yield}}
+      
+      
+      {{> publicFooter}}
+    </div>
+
+  {{/globalLayout}}
+</template>

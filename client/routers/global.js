@@ -1,9 +1,9 @@
-Router.configure({
-    layoutTemplate: "",
-    loadingTemplate: "loadingTemplate",
-    notFoundTemplate: "notFoundTemplate",
+// Router.configure({
+//     layoutTemplate: "",
+//     loadingTemplate: "loadingTemplate",
+//     notFoundTemplate: "notFoundTemplate",
 
-    progressSpinner: false
-});
+//     progressSpinner: false
+// });
 
-Router.onBeforeAction("loading");
+// Router.onBeforeAction("loading");

@@ -1,0 +1,86 @@
+<polymer-element name="tk-form" on-keypress="{{keypressHandler}}">
+  <template>
+    <form>
+      <content></content>
+    </form>
+    <core-signals on-core-signal-submit="{{submitHandler}}"></core-signals>
+  </template>
+
+  <script>
+    Polymer({
+      publish: {
+        valid: false
+      },
+
+      domReady: function() {
+        var decorators = this.getDecorators();
+
+        [].forEach.call(decorators, function(decorator, i) {
+          var input = decorator.querySelector('input, textarea');
+          input.addEventListener('change', function(ev) {
+            var isValid = this.validity.valid;
+            decorator.isInvalid = !isValid;
+          });
+        });
+
+      },
+
+      submit: function() {
+        var _this = this;
+
+        var inputs = this.getDecorators();
+
+        _this.valid = true;
+        [].forEach.call(inputs, function(decorator, i) {
+          var isValid = decorator.querySelector('input, textarea').validity.valid;
+          decorator.isInvalid = !isValid;
+          if (!isValid) {
+            _this.valid = false;
+          }
+        });
+
+        this.fire('submit', this);
+      },
+
+      keypressHandler: function(e) {
+        if (e.which === 13){
+          this.submit();
+        }
+      },
+
+      submitHandler: function(e, detail, sender) {
+        if (detail === this.querySelector('submit-button[type=submit]')) {
+          e.stopPropagation();
+          this.submit();
+        }
+      },
+
+      getDecorators: function(){
+        return this.querySelectorAll('paper-input-decorator');
+      }
+    });
+  </script>
+</polymer-element>
+
+<polymer-element name="submit-button" extends="paper-button" attributes="type" on-click="{{clickHandler}}">
+  <script>
+    Polymer({
+      clickHandler: function(){
+        if (this.type === 'submit'){
+          this.fire('core-signal', {name: 'submit', data: this});
+      
+        }
+      }
+    });
+  </script>
+</polymer-element>
+<polymer-element name="tk-progress" extends="paper-progress" attributed="total current">
+ <script>
+    Polymer({
+      changeProgress:function(inc){
+        this.current = this.current || 0 + inc;
+        this.value = Math.round(this.current*100/this.total);
+      }
+    });
+  </script>
+</polymer-element>

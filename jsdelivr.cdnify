@@ -1,6 +1,6 @@
 [{
     "name": "bootstrap",
-    "files": ["glyphicons-halflings-regular.eot", "glyphicons-halflings-regular.ttf", "glyphicons-halflings-regular.svg", "glyphicons-halflings-regular.woff", "bootstrap.min.css", "bootstrap.min.js"],
+    "files": ["glyphicons-halflings-regular.eot", "glyphicons-halflings-regular.ttf", "glyphicons-halflings-regular.svg", "glyphicons-halflings-regular.woff", "bootstrap.min.js"],
     "offline": true,
     "ver": "3.3.1"
 }, {

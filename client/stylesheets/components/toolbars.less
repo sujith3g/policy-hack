@@ -1,0 +1,48 @@
+@import '../import';
+.toolbar paper-button {
+    text-transform: capitalize;
+}
+
+.toolbar-primary {
+    background-color: @color-primary;
+    color: @color-white;
+    .narrow {
+        .toolbar-item {
+            color: @color-black-light;
+        }
+    }
+}
+
+.toolbar-primary {
+    .toolbar-item {
+        text-align: center;
+    }
+    .clayip-text {
+        color: #f35626;
+        background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear; 
+        font-size: 2.3rem;
+        font-weight: lighter;
+        text-shadow: 0px 1px 0px rgba(255,255,0,0.6);
+        letter-spacing: -.05em;
+
+
+    }
+    core-menu {
+        .toolbar-item {
+            text-align: left;
+        }
+    }
+}
+
+.toolbar-dark {
+    background-color: @color-primary-dark;
+    color: @color-white;
+}
+
+.toolbar {
+    z-index: 11;
+    min-height: 45px;
+}
