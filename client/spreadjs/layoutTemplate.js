@@ -57,7 +57,7 @@ Template.spreadjsBody.rendered = function() {
             size: 200
         }, {
             name: "date_time",
-            displayName: "date_ime",
+            displayName: "date_time",
             size: 200
         }, {
             name: "state",

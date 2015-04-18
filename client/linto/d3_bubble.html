@@ -1,0 +1,46 @@
+<template name="d3Bubble">
+    <style shim-shadowdom>
+    #tooltip {
+        background: white;
+        border: 1px solid #AAA;
+        font-size: 10.5px;
+        max-width: 20%;
+        opacity: 0.8;
+        padding: 4px 8px;
+        position: absolute;
+        z-index: 1000;
+    }
+    </style>
+
+    <div class="hidden" id="tooltip"></div>
+
+    <style>
+    .axis path,
+    .axis line {
+        fill: none;
+        shape-rendering: crispEdges;
+        stroke: #ddd;
+        stroke-dasharray: 2, 4;
+    }
+    
+    .axis path {
+        stroke: none;
+    }
+    
+    circle {
+        stroke: #ddd;
+        cursor: pointer;
+    }
+    
+    .tick text {
+        fill: black;
+        font-size: 12.5px;
+    }
+    
+    text.label {
+        cursor: default;
+    }
+    </style>
+
+    <svg id="d3-bubble" style="width: 100%;"></svg>
+</template>
