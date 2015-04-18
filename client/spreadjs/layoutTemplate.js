@@ -37,43 +37,43 @@ Template.spreadjsBody.rendered = function() {
             visible: false
         }, {
             name: "ref_no",
-            displayName: "Ref No",
+            displayName: "ref_no",
             size: 200
         }, {
             name: "industry",
-            displayName: "Industry",
+            displayName: "industry",
             size: 200
         }, {
             name: "category_bucket_1",
-            displayName: "Category Bucket 1",
+            displayName: "category_bucket_1",
             size: 200
         }, {
             name: "category_bucket_2",
-            displayName: "Category Bucket 2",
+            displayName: "category_bucket_2",
             size: 200
         }, {
             name: "category_bucket_3",
-            displayName: "Category Bucket 3",
+            displayName: "category_bucket_3",
             size: 200
         }, {
             name: "date_time",
-            displayName: "Date & Time",
+            displayName: "date_ime",
             size: 200
         }, {
             name: "state",
-            displayName: "State",
+            displayName: "state",
             size: 200
         }, {
             name: "district",
-            displayName: "District",
+            displayName: "district",
             size: 200
         }, {
             name: "town",
-            displayName: "Town",
+            displayName: "town",
             size: 200
         }, {
             name: "user_reporting_medium",
-            displayName: "User Reporting Medium",
+            displayName: "user_reporting_medium",
             size: 200
         }, {
             name: "index",
@@ -481,7 +481,7 @@ Template.spreadjsBody.rendered = function() {
     // blank db
 
     if (data_source.length == 0)
-        for (var A = 0; A < 80; A++)
+        for (var A = data_source.length; A < 80; A++)
             _row_insert(A);
 
     // search box
