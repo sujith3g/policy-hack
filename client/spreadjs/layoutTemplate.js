@@ -22,7 +22,7 @@ Template.spreadjsBody.rendered = function() {
 
     var activeSheet = spreadjs.sheets[0];
 
-    activeSheet.setName("patent index");
+    activeSheet.setName("policy hack");
 
     var data_source = _spreadjs.find({}, {
             sort: {
