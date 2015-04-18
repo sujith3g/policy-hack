@@ -1,0 +1,21 @@
+[{
+    "name": "bootstrap",
+    "files": ["glyphicons-halflings-regular.eot", "glyphicons-halflings-regular.ttf", "glyphicons-halflings-regular.svg", "glyphicons-halflings-regular.woff", "bootstrap.min.css", "bootstrap.min.js"],
+    "offline": true,
+    "ver": "3.3.1"
+}, {
+    "name": "d3js",
+    "files": ["d3.min.js"],
+    "offline": true,
+    "ver": "3.5.5"
+}, {
+    "name": "handsontable",
+    "files": ["handsontable.full.min.css", "handsontable.full.min.js"],
+    "offline": true,
+    "ver": "0.12.6"
+}, {
+    "name": "fontawesome",
+    "files": ["fontawesome-webfont.eot", "fontawesome-webfont.svg", "fontawesome-webfont.ttf", "fontawesome-webfont.woff", "font-awesome.min.css"],
+    "offline": true,
+    "ver": "4.3.0"
+}]
